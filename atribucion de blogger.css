@@ -1,0 +1,64 @@
+/* ===================================================
+Como eliminar aviso atribucion de blogger
+Blogspot Owinile Njalo: https://blogspot.owinile.com/
+====================================================== */
+
+/* METODO 1 (OCULTAR)
+==================== */
+
+como quitar con la tecnologia de blogger
+
+Ctrl + F 
+
+]]></b:skin>
+
+
+#Attribution1 {height:0px;visibility:hidden;display:none}
+
+
+
+METODO 2 (ELIMINAR)
+==================== */
+
+MOSTAR LA SECCION FOOTER Y ELIMINAR
+
+BUSCAMOS:
+<b:section class='footer' id='footer' name='Footer' showaddelement='false' tag='footer'>
+<b:widget id='Attribution1' locked='true' title='' type='Attribution' visible='true'>
+			  
+REMPALZAMOS:
+			  
+<b:section class='footer' id='footer' name='Footer' showaddelement='true' tag='footer'>
+<b:widget id='Attribution1' locked='false' title='' type='Attribution' visible='true'>
+
+
+/* METODO 3 (EDITAR)
+==================== */
+
+<style>
+      .footer {
+        background-color: #eeeeee;
+        padding: 0px;
+        text-align: center;
+      }
+      .footer-logo {
+        width: 100px;
+      }
+      .footer-links a {
+        color: #666;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+    </style>
+<footer class="footer">
+<p>
+Copyright © <script type="text/JavaScript">
+document.write(new Date().getFullYear());
+</script> derechos reservados  </p>
+      <!-- <img class="footer-logo" src=".logo" alt="Logo de la empresa" /> -->
+      <div class="footer-links">
+        <a href="#">Aviso legal</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos y condiciones</a>
+      </div>
+    </footer>
